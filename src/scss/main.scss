@@ -1,4 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background-color: black;
-  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  font-weight: 600;
+}
+
+h1 {
+  font-weight: 700;
 }
