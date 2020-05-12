@@ -1,7 +1,15 @@
 import React from 'react';
+import SlideShow from './common/SlideShow';
+import SocialMedia from './common/SocialMedia';
 
 function Home(props) {
-  return <h1>Home</h1>;
+  return (
+    <React.Fragment>
+      <h1>The Sweetest Place in America!</h1>
+      <SlideShow />
+      <SocialMedia />
+    </React.Fragment>
+  );
 }
 
 export default Home;

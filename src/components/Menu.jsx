@@ -12,10 +12,10 @@ function Menu(props) {
         expand="lg"
         bg="dark"
         variant="dark"
-        className="mb-4"
+        className="mb-5"
       >
         <Navbar.Brand href="#home">
-          <Link className="navbar-brand" to="/" style={{ fontWeight: '700' }}>
+          <Link className="navbar-brand" to="/">
             Bakery Online Store
           </Link>
         </Navbar.Brand>
@@ -39,11 +39,7 @@ function Menu(props) {
             </NavLink>
           </Nav>
           <Nav>
-            <NavLink
-              className="nav-link mt-3"
-              to="/login"
-              style={{ fontWeight: '600' }}
-            >
+            <NavLink className="nav-link mt-3" to="/login">
               Login
             </NavLink>
             <NavLink className="nav-link" to="/shopping-cart">
