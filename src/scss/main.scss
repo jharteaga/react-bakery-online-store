@@ -1,3 +1,31 @@
+$body-color: #73473d;
+$font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$text-color: #fff;
+
+@mixin mediaLg {
+  @media screen and (max-width: 1159px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (max-width: 899px) {
+    @content;
+  }
+}
+
+@mixin mediaSm {
+  @media screen and (max-width: 599px) {
+    @content;
+  }
+}
+
+@mixin mediaXs {
+  @media screen and (max-width: 340px) {
+    @content;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -45,5 +73,147 @@ h1 {
   & .icon {
     font-size: 3rem;
     cursor: pointer;
+  }
+}
+
+//********************************************
+
+.bakery,
+.drinks {
+  width: 100%;
+  padding: 1em;
+
+  &__box {
+    background-color: $body-color;
+    max-width: 265px;
+    border-radius: 17px;
+    padding-bottom: 1em;
+    font-family: $font-stack;
+    color: $text-color;
+  }
+
+  &__img {
+    max-width: 265px;
+    border-top-left-radius: 17px;
+    border-top-right-radius: 17px;
+  }
+
+  &__name {
+    text-align: center;
+    padding: 0 1em;
+    padding-top: 0.1em;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+
+  &__description {
+    padding: 0 1em;
+    margin-bottom: 0em;
+    font-size: 0.9rem;
+  }
+
+  &__row {
+    padding: 0 2em;
+  }
+
+  &__price {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  &__cart {
+    font-size: 2rem;
+    color: rgb(228, 228, 85);
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.bakery,
+.drinks {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  row-gap: 20px;
+  column-gap: 20px;
+  justify-content: center;
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/********************************************/
+/*              MEDIA QUERIES               */
+/********************************************/
+
+@include mediaLg {
+  .bakery,
+  .drinks {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
+@include mediaMd {
+  .bakery,
+  .drinks {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+@include mediaSm {
+  .header {
+    padding-top: 1.5em;
+  }
+
+  .bakery,
+  .drinks {
+    grid-template-columns: repeat(1, auto);
+  }
+}
+
+.home__carousel {
+  width: 90% !important;
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-top: 1em;
+  & img {
+    height: 600px !important;
+    border-radius: 10px;
+    margin: 0 auto;
+  }
+}
+
+/********************************************/
+/*              MEDIA QUERIES               */
+/********************************************/
+
+@include mediaLg {
+  .home__carousel img {
+    height: 450px !important;
+  }
+}
+
+@include mediaMd {
+  .home {
+    margin: 2em 0;
+
+    &__carousel {
+      width: 100% !important;
+      max-width: 650px;
+    }
+    &__carousel img {
+      height: 300px !important;
+      border-radius: 0;
+    }
   }
 }

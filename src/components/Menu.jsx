@@ -14,7 +14,7 @@ function Menu(props) {
         variant="dark"
         className="mb-5"
       >
-        <Navbar.Brand href="#home">
+        <Navbar.Brand>
           <Link className="navbar-brand" to="/">
             Bakery Online Store
           </Link>
