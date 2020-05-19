@@ -8,8 +8,6 @@ import ContactUs from './components/ContactUs';
 import Home from './components/Home';
 import NotFound from './components/NotFound';
 import ShoppingCart from './components/ShoppingCart';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './scss/main.scss';
 
 // firebase.firestore().collection('drinks').add({
 //   type: 'drink',

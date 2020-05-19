@@ -1,32 +1,70 @@
-import React from 'react';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
+import React, { useState } from 'react';
+import Joi from '@hapi/joi';
 
 function ContactUs(props) {
+  const [data, setData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    message: '',
+  });
+
+  const [errors, setErrors] = useState({});
+
+  const schema = {
+    firstName: Joi.string().min(1).required().label('First Name'),
+    lastName: Joi.string().min(1).required().label('Last Name'),
+    email: Joi.string()
+      .email({ tlds: { allow: false } })
+      .required()
+      .label('Email'),
+    message: Joi.string().min(1).required().label('Message'),
+  };
+
   return (
     <React.Fragment>
       <h1>Contact Us</h1>
-      <Form>
-        <Form.Group controlId="formGroupFirstName">
-          <Form.Label>First Name</Form.Label>
-          <Form.Control type="text" placeholder="Enter first name" />
-        </Form.Group>
-        <Form.Group controlId="formGroupLastName">
-          <Form.Label>Last Name</Form.Label>
-          <Form.Control type="text" placeholder="Enter last name" />
-        </Form.Group>
-        <Form.Group controlId="formGroupEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" />
-        </Form.Group>
-        <Form.Group controlId="formGroupMessage">
-          <Form.Label>Message</Form.Label>
-          <Form.Control as="textarea" rows="3" placeholder="Enter message" />
-        </Form.Group>
-        <Button type="submit" size="md">
+      <form>
+        <div className="form-group">
+          <label htmlFor="firstName">First Name</label>
+          <input
+            type="text"
+            className="form-control"
+            id="firstName"
+            placeholder="Enter first name"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="lastName">Last Name</label>
+          <input
+            type="text"
+            className="form-control"
+            id="lastName"
+            placeholder="Enter last name"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            className="form-control"
+            id="email"
+            placeholder="Enter email"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="message">Message</label>
+          <textarea
+            className="form-control"
+            id="message"
+            rows="3"
+            placeholder="Enter message"
+          ></textarea>
+        </div>
+        <button type="submit" className="btn btn-primary">
           Send
-        </Button>
-      </Form>
+        </button>
+      </form>
     </React.Fragment>
   );
 }

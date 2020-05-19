@@ -1,53 +1,53 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
-import Cart from './common/Cart';
 
 function Menu(props) {
   return (
     <React.Fragment>
-      <Navbar
-        collapseOnSelect
-        expand="lg"
-        bg="dark"
-        variant="dark"
-        className="mb-5"
-      >
-        <Navbar.Brand>
-          <Link className="navbar-brand" to="/">
-            Bakery Online Store
-          </Link>
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mr-auto ml-auto">
-            <NavLink className="nav-link mr-5" to="/home">
-              Home
-            </NavLink>
+      <nav className="navbar navbar-expand-lg navbar-dark bg-light bg-dark mb-5">
+        <Link className="navbar-brand" to="/">
+          Bakery Online Store
+        </Link>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
 
-            <NavLink className="nav-link mr-5" to="/bakery">
-              Bakery
-            </NavLink>
-
-            <NavLink className="nav-link mr-5" to="/drinks">
-              Drinks
-            </NavLink>
-
-            <NavLink className="nav-link mr-5" to="/contact-us">
-              Contact Us
-            </NavLink>
-          </Nav>
-          <Nav>
-            <NavLink className="nav-link mt-3" to="/login">
-              Login
-            </NavLink>
-            <NavLink className="nav-link" to="/shopping-cart">
-              <Cart />
-            </NavLink>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
+        <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul className="navbar-nav mr-auto mt-2 mt-lg-0 ml-auto">
+            <li className="nav-item active">
+              <NavLink className="nav-link mr-5" to="/home">
+                Home
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link mr-5" to="/bakery">
+                Bakery
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link mr-5" to="/drinks">
+                Drinks
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link mr-5" to="/contact-us">
+                Contact Us
+              </NavLink>
+            </li>
+          </ul>
+          <NavLink to="/login">
+            <button className="btn btn-primary my-2 my-sm-0">Login</button>
+          </NavLink>
+        </div>
+      </nav>
     </React.Fragment>
   );
 }

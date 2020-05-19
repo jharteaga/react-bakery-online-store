@@ -70,7 +70,7 @@ h1 {
   width: 30%;
   margin: 0 auto;
   margin-top: 2em;
-  & .icon {
+  & .fab {
     font-size: 3rem;
     cursor: pointer;
   }
@@ -86,14 +86,17 @@ h1 {
   &__box {
     background-color: $body-color;
     max-width: 265px;
+    height: 350px;
     border-radius: 17px;
     padding-bottom: 1em;
     font-family: $font-stack;
     color: $text-color;
+    border: none;
   }
 
   &__img {
     max-width: 265px;
+    max-height: 160px;
     border-top-left-radius: 17px;
     border-top-right-radius: 17px;
   }
