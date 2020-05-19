@@ -19,7 +19,7 @@ function Bakery(props) {
   };
 
   const getCurrentUser = () => {
-    const user = localStorage.getItem('currentUser');
+    const user = JSON.parse(localStorage.getItem('currentUser'));
     setCurrentUser(user);
   };
 

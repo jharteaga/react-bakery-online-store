@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 
 function Menu(props) {
+  const [currentUser, setCurrentUser] = useState(undefined);
+
+  const getCurrentUser = () => {
+    const user = JSON.parse(localStorage.getItem('currentUser'));
+    setCurrentUser(user);
+  };
+
+  useEffect(() => {
+    getCurrentUser();
+  }, []);
+
   return (
     <React.Fragment>
       <nav className="navbar navbar-expand-lg navbar-dark bg-light bg-dark mb-5">
@@ -43,9 +54,14 @@ function Menu(props) {
               </NavLink>
             </li>
           </ul>
-          <NavLink to="/login">
-            <button className="btn btn-primary my-2 my-sm-0">Login</button>
-          </NavLink>
+          {!currentUser && (
+            <NavLink to="/login">
+              <button className="btn btn-primary my-2 my-sm-0">Login</button>
+            </NavLink>
+          )}
+          {currentUser && (
+            <span class="user-info">Welcome, {currentUser.firstName}</span>
+          )}
         </div>
       </nav>
     </React.Fragment>
