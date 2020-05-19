@@ -3,8 +3,9 @@ import firebase from '../firebase';
 
 function Drinks(props) {
   const [drinks, setDrinks] = useState([]);
+  const [currentUser, setCurrentUser] = useState(undefined);
 
-  useEffect(() => {
+  const getDrinks = () => {
     firebase
       .firestore()
       .collection('drinks')
@@ -15,6 +16,16 @@ function Drinks(props) {
         }));
         setDrinks(result);
       });
+  };
+
+  const getCurrentUser = () => {
+    const user = localStorage.getItem('currentUser');
+    setCurrentUser(user);
+  };
+
+  useEffect(() => {
+    getDrinks();
+    getCurrentUser();
   }, []);
 
   return (
@@ -28,9 +39,11 @@ function Drinks(props) {
             <p className="bakery__description">{d.description}</p>
             <div className="bakery__row">
               <span className="bakery__price">${d.price}</span>
-              <span className="bakery__cart">
-                <i className="fas fa-cart-arrow-down"></i>
-              </span>
+              {currentUser && (
+                <span className="bakery__cart">
+                  <i className="fas fa-cart-arrow-down"></i>
+                </span>
+              )}
             </div>
           </div>
         ))}

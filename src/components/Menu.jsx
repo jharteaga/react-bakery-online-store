@@ -22,7 +22,7 @@ function Menu(props) {
 
         <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul className="navbar-nav mr-auto mt-2 mt-lg-0 ml-auto">
-            <li className="nav-item active">
+            <li className="nav-item">
               <NavLink className="nav-link mr-5" to="/home">
                 Home
               </NavLink>

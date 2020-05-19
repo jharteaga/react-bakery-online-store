@@ -3,8 +3,9 @@ import firebase from '../firebase';
 
 function Bakery(props) {
   const [bakeries, setBakery] = useState([]);
+  const [currentUser, setCurrentUser] = useState(undefined);
 
-  useEffect(() => {
+  const getBakery = () => {
     firebase
       .firestore()
       .collection('bakery')
@@ -15,6 +16,16 @@ function Bakery(props) {
         }));
         setBakery(result);
       });
+  };
+
+  const getCurrentUser = () => {
+    const user = localStorage.getItem('currentUser');
+    setCurrentUser(user);
+  };
+
+  useEffect(() => {
+    getBakery();
+    getCurrentUser();
   }, []);
 
   return (
@@ -28,9 +39,11 @@ function Bakery(props) {
             <p className="bakery__description">{b.description}</p>
             <div className="bakery__row">
               <span className="bakery__price">${b.price}</span>
-              <span className="bakery__cart">
-                <i className="fas fa-cart-arrow-down"></i>
-              </span>
+              {currentUser && (
+                <span className="bakery__cart">
+                  <i className="fas fa-cart-arrow-down"></i>
+                </span>
+              )}
             </div>
           </div>
         ))}
