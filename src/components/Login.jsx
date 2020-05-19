@@ -1,13 +1,40 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Redirect } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
+import firebase from '../firebase';
 
 function Login(props) {
-  const { register, handleSubmit, errors } = useForm();
+  const { register, handleSubmit, errors, getValues } = useForm();
+  const [errorLogin, setErrorLogin] = useState(undefined);
 
   const onSubmit = () => {
     //Call Firebase to validate user
-    console.log('Login');
+    firebase
+      .firestore()
+      .collection('users')
+      .where('username', '==', getValues('email'))
+      .get()
+      .then((querySnapshot) => {
+        const user = querySnapshot.docs[0].data();
+        setErrorLogin(undefined);
+        setCurrentUser(user);
+        window.location = '/';
+        // const { state } = this.props.location;
+        // window.location = state ? state.from.pathname : '/';
+      })
+      .catch((error) => {
+        setErrorLogin({ message: 'Invalid Credentials' });
+      });
   };
+
+  const setCurrentUser = (user) => {
+    localStorage.setItem('currentUser', JSON.stringify(user));
+  };
+
+  useEffect(() => {}, [errorLogin]);
+
+  if (JSON.parse(localStorage.getItem('currentUser')))
+    return <Redirect to="/" />;
 
   return (
     <React.Fragment>
@@ -57,6 +84,11 @@ function Login(props) {
           Sign In
         </button>
       </form>
+      <br />
+
+      {errorLogin && (
+        <div className="alert alert-danger">{errorLogin.message}</div>
+      )}
     </React.Fragment>
   );
 }

@@ -60,7 +60,14 @@ function Menu(props) {
             </NavLink>
           )}
           {currentUser && (
-            <span class="user-info">Welcome, {currentUser.firstName}</span>
+            <div>
+              <span class="user-info mr-4">
+                Welcome, {currentUser.firstName}!
+              </span>
+              <NavLink to="/logout">
+                <button className="btn btn-danger my-2 my-sm-0">Logout</button>
+              </NavLink>
+            </div>
           )}
         </div>
       </nav>
