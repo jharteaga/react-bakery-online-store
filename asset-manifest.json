@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.1faf0036.chunk.css",
-    "main.js": "/static/js/main.9fd1d679.chunk.js",
-    "main.js.map": "/static/js/main.9fd1d679.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.1d19ac40.js",
-    "runtime-main.js.map": "/static/js/runtime-main.1d19ac40.js.map",
-    "static/css/2.af3c1da9.chunk.css": "/static/css/2.af3c1da9.chunk.css",
-    "static/js/2.c495751a.chunk.js": "/static/js/2.c495751a.chunk.js",
-    "static/js/2.c495751a.chunk.js.map": "/static/js/2.c495751a.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.0020b08655781c6bdf060b5a3745a830.js": "/precache-manifest.0020b08655781c6bdf060b5a3745a830.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.af3c1da9.chunk.css.map": "/static/css/2.af3c1da9.chunk.css.map",
-    "static/css/main.1faf0036.chunk.css.map": "/static/css/main.1faf0036.chunk.css.map",
-    "static/js/2.c495751a.chunk.js.LICENSE.txt": "/static/js/2.c495751a.chunk.js.LICENSE.txt",
-    "static/media/carousel-img1.jpg": "/static/media/carousel-img1.0be2083a.jpg",
-    "static/media/carousel-img2.jpg": "/static/media/carousel-img2.6691f172.jpg",
-    "static/media/carousel-img3.jpg": "/static/media/carousel-img3.66479b57.jpg"
+    "main.css": "/react-bakery-online-store/static/css/main.9c11cb10.chunk.css",
+    "main.js": "/react-bakery-online-store/static/js/main.e5d8b10c.chunk.js",
+    "main.js.map": "/react-bakery-online-store/static/js/main.e5d8b10c.chunk.js.map",
+    "runtime-main.js": "/react-bakery-online-store/static/js/runtime-main.b0216f02.js",
+    "runtime-main.js.map": "/react-bakery-online-store/static/js/runtime-main.b0216f02.js.map",
+    "static/css/2.829c9cb5.chunk.css": "/react-bakery-online-store/static/css/2.829c9cb5.chunk.css",
+    "static/js/2.20edabce.chunk.js": "/react-bakery-online-store/static/js/2.20edabce.chunk.js",
+    "static/js/2.20edabce.chunk.js.map": "/react-bakery-online-store/static/js/2.20edabce.chunk.js.map",
+    "index.html": "/react-bakery-online-store/index.html",
+    "precache-manifest.d6e4d0ab7b53e0c4a0cb10525f542f86.js": "/react-bakery-online-store/precache-manifest.d6e4d0ab7b53e0c4a0cb10525f542f86.js",
+    "service-worker.js": "/react-bakery-online-store/service-worker.js",
+    "static/css/2.829c9cb5.chunk.css.map": "/react-bakery-online-store/static/css/2.829c9cb5.chunk.css.map",
+    "static/css/main.9c11cb10.chunk.css.map": "/react-bakery-online-store/static/css/main.9c11cb10.chunk.css.map",
+    "static/js/2.20edabce.chunk.js.LICENSE.txt": "/react-bakery-online-store/static/js/2.20edabce.chunk.js.LICENSE.txt",
+    "static/media/carousel-img1.jpg": "/react-bakery-online-store/static/media/carousel-img1.0be2083a.jpg",
+    "static/media/carousel-img2.jpg": "/react-bakery-online-store/static/media/carousel-img2.6691f172.jpg",
+    "static/media/carousel-img3.jpg": "/react-bakery-online-store/static/media/carousel-img3.66479b57.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.1d19ac40.js",
-    "static/css/2.af3c1da9.chunk.css",
-    "static/js/2.c495751a.chunk.js",
-    "static/css/main.1faf0036.chunk.css",
-    "static/js/main.9fd1d679.chunk.js"
+    "static/js/runtime-main.b0216f02.js",
+    "static/css/2.829c9cb5.chunk.css",
+    "static/js/2.20edabce.chunk.js",
+    "static/css/main.9c11cb10.chunk.css",
+    "static/js/main.e5d8b10c.chunk.js"
   ]
 }
