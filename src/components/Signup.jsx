@@ -47,7 +47,7 @@ function Signup(props) {
 
       localStorage.setItem('currentUser', jwt.encode(user, 'secret'));
 
-      window.location = '/';
+      window.location = '/react-bakery-online-store/';
     } catch (error) {
       setErrorSignUp({
         message:
