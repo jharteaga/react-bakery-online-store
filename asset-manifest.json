@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/react-bakery-online-store/static/css/main.9c11cb10.chunk.css",
-    "main.js": "/react-bakery-online-store/static/js/main.7dd81f00.chunk.js",
-    "main.js.map": "/react-bakery-online-store/static/js/main.7dd81f00.chunk.js.map",
+    "main.js": "/react-bakery-online-store/static/js/main.61337f13.chunk.js",
+    "main.js.map": "/react-bakery-online-store/static/js/main.61337f13.chunk.js.map",
     "runtime-main.js": "/react-bakery-online-store/static/js/runtime-main.b0216f02.js",
     "runtime-main.js.map": "/react-bakery-online-store/static/js/runtime-main.b0216f02.js.map",
     "static/css/2.829c9cb5.chunk.css": "/react-bakery-online-store/static/css/2.829c9cb5.chunk.css",
     "static/js/2.20edabce.chunk.js": "/react-bakery-online-store/static/js/2.20edabce.chunk.js",
     "static/js/2.20edabce.chunk.js.map": "/react-bakery-online-store/static/js/2.20edabce.chunk.js.map",
     "index.html": "/react-bakery-online-store/index.html",
-    "precache-manifest.24709745ca49da34d83eec15f6db9be8.js": "/react-bakery-online-store/precache-manifest.24709745ca49da34d83eec15f6db9be8.js",
+    "precache-manifest.4351f71566acb7a8420c2fa08790a614.js": "/react-bakery-online-store/precache-manifest.4351f71566acb7a8420c2fa08790a614.js",
     "service-worker.js": "/react-bakery-online-store/service-worker.js",
     "static/css/2.829c9cb5.chunk.css.map": "/react-bakery-online-store/static/css/2.829c9cb5.chunk.css.map",
     "static/css/main.9c11cb10.chunk.css.map": "/react-bakery-online-store/static/css/main.9c11cb10.chunk.css.map",
@@ -23,6 +23,6 @@
     "static/css/2.829c9cb5.chunk.css",
     "static/js/2.20edabce.chunk.js",
     "static/css/main.9c11cb10.chunk.css",
-    "static/js/main.7dd81f00.chunk.js"
+    "static/js/main.61337f13.chunk.js"
   ]
 }
