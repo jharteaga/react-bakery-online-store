@@ -35,22 +35,38 @@ function Menu(props) {
 
         <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul className="navbar-nav mr-auto mt-2 mt-lg-0 ml-auto">
-            <li className="nav-item">
+            <li
+              className="nav-item"
+              data-toggle="collapse"
+              data-target=".navbar-collapse.show"
+            >
               <NavLink className="nav-link mr-5" to="/home">
                 Home
               </NavLink>
             </li>
-            <li className="nav-item">
+            <li
+              className="nav-item"
+              data-toggle="collapse"
+              data-target=".navbar-collapse.show"
+            >
               <NavLink className="nav-link mr-5" to="/bakery">
                 Bakery
               </NavLink>
             </li>
-            <li className="nav-item">
+            <li
+              className="nav-item"
+              data-toggle="collapse"
+              data-target=".navbar-collapse.show"
+            >
               <NavLink className="nav-link mr-5" to="/drinks">
                 Drinks
               </NavLink>
             </li>
-            <li className="nav-item">
+            <li
+              className="nav-item"
+              data-toggle="collapse"
+              data-target=".navbar-collapse.show"
+            >
               <NavLink className="nav-link mr-5" to="/contact-us">
                 Contact Us
               </NavLink>
@@ -59,12 +75,22 @@ function Menu(props) {
           {!currentUser && (
             <React.Fragment>
               <NavLink to="/login">
-                <button className="btn btn-primary my-2 my-sm-0 mr-2">
+                <button
+                  className="btn btn-primary my-2 my-sm-0 mr-2"
+                  data-toggle="collapse"
+                  data-target=".navbar-collapse.show"
+                >
                   Login
                 </button>
               </NavLink>
               <NavLink to="/sign-up">
-                <button className="btn btn-danger my-2 my-sm-0">Sign Up</button>
+                <button
+                  className="btn btn-danger my-2 my-sm-0"
+                  data-toggle="collapse"
+                  data-target=".navbar-collapse.show"
+                >
+                  Sign Up
+                </button>
               </NavLink>
             </React.Fragment>
           )}
