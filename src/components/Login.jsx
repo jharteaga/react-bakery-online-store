@@ -20,7 +20,7 @@ function Login(props) {
         const user = querySnapshot.docs[0].data();
         setErrorLogin(undefined);
         setCurrentUser(user);
-        window.location = '/';
+        window.location = '/react-bakery-online-store/';
       })
       .catch((error) => {
         setErrorLogin({ message: 'Invalid Credentials' });

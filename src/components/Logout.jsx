@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 function Logout(props) {
   useEffect(() => {
     localStorage.removeItem('currentUser');
-    window.location = '/';
+    window.location = '/react-bakery-online-store';
   });
 
   return null;

@@ -6,7 +6,9 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './scss/main.scss';
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter
+    basename={process.env.PUBLIC_URL || '/react-bakery-online-store'}
+  >
     <App />
   </BrowserRouter>,
   document.getElementById('root')
