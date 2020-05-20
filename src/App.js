@@ -9,6 +9,7 @@ import Home from './components/Home';
 import NotFound from './components/NotFound';
 import ShoppingCart from './components/ShoppingCart';
 import Logout from './components/Logout';
+import Signup from './components/Signup';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <main className="container">
         <Switch>
           <Route path="/logout" component={Logout} />
+          <Route path="/sign-up" component={Signup} />
           <Route path="/login" component={Login} />
           <Route path="/shopping-cart" component={ShoppingCart} />
           <Route path="/bakery" component={Bakery} />

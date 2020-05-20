@@ -57,13 +57,22 @@ function Menu(props) {
             </li>
           </ul>
           {!currentUser && (
-            <NavLink to="/login">
-              <button className="btn btn-primary my-2 my-sm-0">Login</button>
-            </NavLink>
+            <React.Fragment>
+              <NavLink to="/login">
+                <button className="btn btn-primary my-2 my-sm-0 mr-2">
+                  Login
+                </button>
+              </NavLink>
+              <NavLink to="/sign-up">
+                <button className="btn btn-danger my-2 my-sm-0">Sign Up</button>
+              </NavLink>
+            </React.Fragment>
           )}
           {currentUser && (
             <div>
-              <span class="user-info">Welcome, {currentUser.firstName}!</span>
+              <span className="user-info">
+                Welcome, {currentUser.firstName}!
+              </span>
               <NavLink to="/logout">
                 <button className="btn btn-danger my-2 my-sm-0">Logout</button>
               </NavLink>

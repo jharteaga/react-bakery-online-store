@@ -35,6 +35,10 @@ body {
   padding: 0;
 }
 
+.navbar * {
+  outline: none;
+}
+
 .navbar-brand {
   font-weight: 600;
   font-size: 1.7rem;

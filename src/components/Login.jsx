@@ -29,7 +29,6 @@ function Login(props) {
 
   const setCurrentUser = (user) => {
     const jwtUser = jwt.encode(user, 'secret');
-    console.log(jwtUser);
     localStorage.setItem('currentUser', jwtUser);
   };
 
