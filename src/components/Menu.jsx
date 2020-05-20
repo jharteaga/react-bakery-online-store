@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import jwt from 'jwt-simple';
 
 function Menu(props) {
   const [currentUser, setCurrentUser] = useState(undefined);
 
   const getCurrentUser = () => {
-    const user = JSON.parse(localStorage.getItem('currentUser'));
-    setCurrentUser(user);
+    const jwtUser = localStorage.getItem('currentUser');
+    if (jwtUser) setCurrentUser(jwt.decode(jwtUser, 'secret'));
+    else setCurrentUser(undefined);
   };
 
   useEffect(() => {
@@ -61,9 +63,7 @@ function Menu(props) {
           )}
           {currentUser && (
             <div>
-              <span class="user-info mr-4">
-                Welcome, {currentUser.firstName}!
-              </span>
+              <span class="user-info">Welcome, {currentUser.firstName}!</span>
               <NavLink to="/logout">
                 <button className="btn btn-danger my-2 my-sm-0">Logout</button>
               </NavLink>

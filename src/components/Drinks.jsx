@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import firebase from '../firebase';
+import jwt from 'jwt-simple';
 
 function Drinks(props) {
   const [drinks, setDrinks] = useState([]);
@@ -19,8 +20,9 @@ function Drinks(props) {
   };
 
   const getCurrentUser = () => {
-    const user = JSON.parse(localStorage.getItem('currentUser'));
-    setCurrentUser(user);
+    const jwtUser = localStorage.getItem('currentUser');
+    if (jwtUser) setCurrentUser(jwt.decode(jwtUser, 'secret'));
+    else setCurrentUser(undefined);
   };
 
   useEffect(() => {

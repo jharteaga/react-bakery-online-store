@@ -10,6 +10,7 @@
     "firebase": "^7.14.3",
     "font-awesome": "^4.7.0",
     "gh-pages": "^2.2.0",
+    "jwt-simple": "^0.5.6",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",

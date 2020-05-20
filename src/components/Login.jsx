@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Redirect } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import firebase from '../firebase';
+import jwt from 'jwt-simple';
 
 function Login(props) {
   const { register, handleSubmit, errors, getValues } = useForm();
@@ -13,14 +14,13 @@ function Login(props) {
       .firestore()
       .collection('users')
       .where('username', '==', getValues('email'))
+      .where('password', '==', getValues('password'))
       .get()
       .then((querySnapshot) => {
         const user = querySnapshot.docs[0].data();
         setErrorLogin(undefined);
         setCurrentUser(user);
         window.location = '/';
-        // const { state } = this.props.location;
-        // window.location = state ? state.from.pathname : '/';
       })
       .catch((error) => {
         setErrorLogin({ message: 'Invalid Credentials' });
@@ -28,7 +28,9 @@ function Login(props) {
   };
 
   const setCurrentUser = (user) => {
-    localStorage.setItem('currentUser', JSON.stringify(user));
+    const jwtUser = jwt.encode(user, 'secret');
+    console.log(jwtUser);
+    localStorage.setItem('currentUser', jwtUser);
   };
 
   useEffect(() => {}, [errorLogin]);
