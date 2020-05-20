@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6a12735611281387c760d0777706ea4f",
+    "revision": "f550b484295778975a90bb1610fe5bb6",
     "url": "/react-bakery-online-store/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-bakery-online-store/static/css/2.829c9cb5.chunk.css"
   },
   {
-    "revision": "aca3b51859755c318090",
+    "revision": "bdd04b12c592486bb966",
     "url": "/react-bakery-online-store/static/css/main.9c11cb10.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-bakery-online-store/static/js/2.20edabce.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "aca3b51859755c318090",
-    "url": "/react-bakery-online-store/static/js/main.8dd393a4.chunk.js"
+    "revision": "bdd04b12c592486bb966",
+    "url": "/react-bakery-online-store/static/js/main.7dd81f00.chunk.js"
   },
   {
     "revision": "f297b77cd3cb0c310a2b",
