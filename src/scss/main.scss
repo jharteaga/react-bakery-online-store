@@ -70,10 +70,9 @@ h1 {
 
 .social-media {
   display: flex;
-  justify-content: space-evenly;
-  width: 30%;
-  margin: 0 auto;
-  margin-top: 2em;
+  justify-content: space-around;
+  width: 60%;
+  margin: 2em auto;
   & .fab {
     font-size: 3rem;
     cursor: pointer;
