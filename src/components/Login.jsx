@@ -53,6 +53,7 @@ function Login(props) {
               required: true,
               pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
             })}
+            placeholder="Enter email address"
           />
           {errors.email?.type === 'required' && (
             <div className="alert alert-danger">This field is required</div>
@@ -71,6 +72,7 @@ function Login(props) {
             id="password"
             name="password"
             ref={register({ required: true, minLength: 6 })}
+            placeholder="Enter password"
           />
           {errors.password?.type === 'required' && (
             <div className="alert alert-danger">This field is required</div>

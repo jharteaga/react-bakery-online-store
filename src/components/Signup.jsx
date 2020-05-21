@@ -68,6 +68,7 @@ function Signup(props) {
             id="firstName"
             name="firstName"
             ref={register({ required: true, minLength: 1 })}
+            placeholder="Enter first Name"
           />
           {errors.firstName?.type === 'required' && (
             <div className="alert alert-danger">This field is required</div>
@@ -86,6 +87,7 @@ function Signup(props) {
             id="lastName"
             name="lastName"
             ref={register({ required: true, minLength: 1 })}
+            placeholder="Enter last Name"
           />
           {errors.lastName?.type === 'required' && (
             <div className="alert alert-danger">This field is required</div>
@@ -108,6 +110,7 @@ function Signup(props) {
               required: true,
               pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
             })}
+            placeholder="Enter email address"
           />
           {errors.email?.type === 'required' && (
             <div className="alert alert-danger">This field is required</div>
@@ -124,6 +127,7 @@ function Signup(props) {
             id="password"
             name="password"
             ref={register({ required: true, minLength: 6 })}
+            placeholder="Enter password"
           />
           {errors.password?.type === 'required' && (
             <div className="alert alert-danger">This field is required</div>
