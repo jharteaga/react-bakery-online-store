@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Badge from '@material-ui/core/Badge';
 import { withStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
@@ -14,9 +14,11 @@ const StyledBadge = withStyles((theme) => ({
 }))(Badge);
 
 export default function Cart() {
+  const [numItems, setNumItems] = useState(0);
+
   return (
-    <IconButton aria-label="cart">
-      <StyledBadge badgeContent={0} color="primary">
+    <IconButton aria-label="cart" id="cart-icon">
+      <StyledBadge badgeContent={numItems} color="primary">
         <ShoppingCartIcon
           fontSize="large"
           className="mx-0 my-0"

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import jwt from 'jwt-simple';
+import Cart from './common/Cart';
 
 function Menu(props) {
   const [currentUser, setCurrentUser] = useState(undefined);
@@ -99,6 +100,7 @@ function Menu(props) {
               <span className="user-info">
                 Welcome, {currentUser.firstName}!
               </span>
+              <Cart />
               <NavLink to="/logout">
                 <button className="btn btn-danger my-2 my-sm-0">Logout</button>
               </NavLink>
