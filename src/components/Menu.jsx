@@ -100,7 +100,9 @@ function Menu(props) {
               <span className="user-info">
                 Welcome, {currentUser.firstName}!
               </span>
-              <Cart />
+              <Link to="/shopping-cart">
+                <Cart />
+              </Link>
               <NavLink to="/logout">
                 <button className="btn btn-danger my-2 my-sm-0">Logout</button>
               </NavLink>

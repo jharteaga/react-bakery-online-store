@@ -42,6 +42,7 @@ function App() {
       <CartContext.Provider
         value={{
           numItems: numItems,
+          cartItems: cartItems,
           onAddItem: handleAddItem,
           onShowCart: handleShowCart,
         }}
