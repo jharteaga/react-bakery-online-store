@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/react-bakery-online-store/static/css/main.f76d2e94.chunk.css",
-    "main.js": "/react-bakery-online-store/static/js/main.86deb56b.chunk.js",
-    "main.js.map": "/react-bakery-online-store/static/js/main.86deb56b.chunk.js.map",
+    "main.css": "/react-bakery-online-store/static/css/main.4c27aa51.chunk.css",
+    "main.js": "/react-bakery-online-store/static/js/main.4f03610e.chunk.js",
+    "main.js.map": "/react-bakery-online-store/static/js/main.4f03610e.chunk.js.map",
     "runtime-main.js": "/react-bakery-online-store/static/js/runtime-main.b0216f02.js",
     "runtime-main.js.map": "/react-bakery-online-store/static/js/runtime-main.b0216f02.js.map",
     "static/css/2.52f28872.chunk.css": "/react-bakery-online-store/static/css/2.52f28872.chunk.css",
-    "static/js/2.5971c6d0.chunk.js": "/react-bakery-online-store/static/js/2.5971c6d0.chunk.js",
-    "static/js/2.5971c6d0.chunk.js.map": "/react-bakery-online-store/static/js/2.5971c6d0.chunk.js.map",
+    "static/js/2.178866f6.chunk.js": "/react-bakery-online-store/static/js/2.178866f6.chunk.js",
+    "static/js/2.178866f6.chunk.js.map": "/react-bakery-online-store/static/js/2.178866f6.chunk.js.map",
     "index.html": "/react-bakery-online-store/index.html",
-    "precache-manifest.ece3ea023643ac21888ebd1d74dfae8d.js": "/react-bakery-online-store/precache-manifest.ece3ea023643ac21888ebd1d74dfae8d.js",
+    "precache-manifest.321ff207f91e9b3fd00eb45d706aa043.js": "/react-bakery-online-store/precache-manifest.321ff207f91e9b3fd00eb45d706aa043.js",
     "service-worker.js": "/react-bakery-online-store/service-worker.js",
     "static/css/2.52f28872.chunk.css.map": "/react-bakery-online-store/static/css/2.52f28872.chunk.css.map",
-    "static/css/main.f76d2e94.chunk.css.map": "/react-bakery-online-store/static/css/main.f76d2e94.chunk.css.map",
-    "static/js/2.5971c6d0.chunk.js.LICENSE.txt": "/react-bakery-online-store/static/js/2.5971c6d0.chunk.js.LICENSE.txt",
+    "static/css/main.4c27aa51.chunk.css.map": "/react-bakery-online-store/static/css/main.4c27aa51.chunk.css.map",
+    "static/js/2.178866f6.chunk.js.LICENSE.txt": "/react-bakery-online-store/static/js/2.178866f6.chunk.js.LICENSE.txt",
     "static/media/carousel-img1.jpg": "/react-bakery-online-store/static/media/carousel-img1.0be2083a.jpg",
     "static/media/carousel-img2.jpg": "/react-bakery-online-store/static/media/carousel-img2.6691f172.jpg",
     "static/media/carousel-img3.jpg": "/react-bakery-online-store/static/media/carousel-img3.66479b57.jpg"
@@ -21,8 +21,8 @@
   "entrypoints": [
     "static/js/runtime-main.b0216f02.js",
     "static/css/2.52f28872.chunk.css",
-    "static/js/2.5971c6d0.chunk.js",
-    "static/css/main.f76d2e94.chunk.css",
-    "static/js/main.86deb56b.chunk.js"
+    "static/js/2.178866f6.chunk.js",
+    "static/css/main.4c27aa51.chunk.css",
+    "static/js/main.4f03610e.chunk.js"
   ]
 }
