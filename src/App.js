@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Menu from './components/Menu';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Login from './components/Login';
@@ -13,8 +13,16 @@ import Signup from './components/Signup';
 import CartContext from './components/context/cartContext';
 
 function App() {
-  const [cartItems, setCartItems] = useState([]);
-  const [numItems, setNumItems] = useState(0);
+  const [cartItems, setCartItems] = useState(
+    localStorage.getItem('userCartItems')
+      ? JSON.parse(localStorage.getItem('userCartItems'))
+      : []
+  );
+  const [numItems, setNumItems] = useState(
+    localStorage.getItem('userCartItems')
+      ? JSON.parse(localStorage.getItem('userCartItems')).length
+      : 0
+  );
 
   const handleAddItem = (item) => {
     setCartItems(cartItems.length > 0 ? [...cartItems, item] : [item]);
@@ -24,6 +32,10 @@ function App() {
   const handleShowCart = () => {
     console.log(cartItems);
   };
+
+  useEffect(() => {
+    localStorage.setItem('userCartItems', JSON.stringify(cartItems));
+  }, [cartItems]);
 
   return (
     <React.Fragment>
