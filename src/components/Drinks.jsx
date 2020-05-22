@@ -1,10 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import firebase from '../firebase';
 import jwt from 'jwt-simple';
+import CartContext from './context/cartContext';
+import { ToastContainer, toast } from 'react-toastify';
 
 function Drinks(props) {
   const [drinks, setDrinks] = useState([]);
   const [currentUser, setCurrentUser] = useState(undefined);
+
+  const cartContext = useContext(CartContext);
 
   const getDrinks = () => {
     firebase
@@ -42,7 +46,21 @@ function Drinks(props) {
             <div className="bakery__row">
               <span className="bakery__price">${d.price}</span>
               {currentUser && (
-                <span className="bakery__cart">
+                <span
+                  className="bakery__cart"
+                  onClick={() => {
+                    cartContext.onAddItem(d);
+                    toast.success(`✅ ${d.name} added`, {
+                      position: 'bottom-center',
+                      autoClose: 2500,
+                      hideProgressBar: true,
+                      closeOnClick: false,
+                      pauseOnHover: false,
+                      draggable: false,
+                      progress: undefined,
+                    });
+                  }}
+                >
                   <i className="fas fa-cart-arrow-down"></i>
                 </span>
               )}
@@ -50,6 +68,7 @@ function Drinks(props) {
           </div>
         ))}
       </div>
+      <ToastContainer />
     </React.Fragment>
   );
 }
