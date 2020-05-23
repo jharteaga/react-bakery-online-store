@@ -13,9 +13,19 @@ function ShoppingCart(props) {
 
   return (
     <div className="shopping-container">
-      {/* <div className="preview-checkout">
-        <h2>Preview Checkout</h2>
-      </div> */}
+      <div className="preview-checkout mt-2">
+        <h1>
+          <h2>Your total is: </h2> US$
+          {listItems
+            .reduce((accum, currentVal) => {
+              return accum + currentVal[0].price * currentVal.length;
+            }, 0)
+            .toFixed(2)}
+        </h1>
+        <button className="btn btn-success btn-lg mt-2">
+          Proceed to Checkout
+        </button>
+      </div>
       <div className="table-responsive-sm mb-5">
         <h1 className="mb-4">Shopping Cart</h1>
         <table className="table">
