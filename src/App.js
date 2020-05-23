@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Menu from './components/Menu';
 import { Switch, Route, Redirect } from 'react-router-dom';
+import _ from 'lodash';
 import Login from './components/Login';
 import Bakery from './components/Bakery';
 import Drinks from './components/Drinks';
@@ -30,10 +31,30 @@ function App() {
   };
 
   const handleRemoveItem = (item) => {
-    const items = [...cartItems].filter((i) => i.id !== item[0].id);
+    const items = [...cartItems].filter((i) => i.id !== item.id);
     const numItems = items.length;
     setCartItems(items);
     setNumItems(numItems);
+  };
+
+  const handleQuantityChange = (item, count) => {
+    const restItems = [...cartItems].filter((i) => i.id !== item.id);
+    let items = [...cartItems].filter((i) => i.id === item.id);
+    const newQuantityList =
+      count < items.length
+        ? _.dropRight(items, items.length - count)
+        : addQuantity(item, count);
+    items = _.concat(restItems, newQuantityList);
+    setCartItems(items);
+    setNumItems(items.length);
+  };
+
+  const addQuantity = (item, count) => {
+    const array = [];
+    for (let i = 0; i < count; i++) {
+      array.push(item);
+    }
+    return array;
   };
 
   const handleShowCart = () => {
@@ -53,6 +74,7 @@ function App() {
           onAddItem: handleAddItem,
           onShowCart: handleShowCart,
           onDeleteItem: handleRemoveItem,
+          onQuantityChange: handleQuantityChange,
         }}
       >
         <Menu />

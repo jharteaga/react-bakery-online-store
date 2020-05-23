@@ -48,12 +48,22 @@ function ShoppingCart(props) {
                 <td>{item[0].name}</td>
                 <td>US$ {item[0].price}</td>
                 <td>
-                  <select id="quantity" defaultValue={item.length}>
+                  <select
+                    id="quantity"
+                    defaultValue={item.length}
+                    onChange={(e) =>
+                      cartContext.onQuantityChange(item[0], e.target.value)
+                    }
+                  >
                     {[...Array(5).keys()].map((value) =>
                       value + 1 !== item.length ? (
-                        <option key={value + 1}>{value + 1}</option>
+                        <option key={value + 1} value={value + 1}>
+                          {value + 1}
+                        </option>
                       ) : (
-                        <option key={value + 1}>{value + 1}</option>
+                        <option key={value + 1} value={value + 1}>
+                          {value + 1}
+                        </option>
                       )
                     )}
                   </select>
@@ -62,7 +72,7 @@ function ShoppingCart(props) {
                   <button
                     className="btn btn-danger btn-sm"
                     onClick={() => {
-                      cartContext.onDeleteItem(item);
+                      cartContext.onDeleteItem(item[0]);
                       toast.error(`✅ ${item[0].name} removed`, {
                         position: 'bottom-center',
                         autoClose: 2500,
