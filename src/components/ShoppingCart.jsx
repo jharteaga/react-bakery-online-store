@@ -1,4 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
 import CartContext from './context/cartContext';
 import _ from 'lodash';
 
@@ -15,7 +16,7 @@ function ShoppingCart(props) {
     <div className="shopping-container">
       <div className="preview-checkout mt-2">
         <h1>
-          <h2>Your total is: </h2> US$
+          <p>Your total is: </p> US$
           {listItems
             .reduce((accum, currentVal) => {
               return accum + currentVal[0].price * currentVal.length;
@@ -57,15 +58,31 @@ function ShoppingCart(props) {
                     )}
                   </select>
                 </td>
-
                 <td>
-                  <button className="btn btn-danger btn-sm">Remove</button>
+                  <button
+                    className="btn btn-danger btn-sm"
+                    onClick={() => {
+                      cartContext.onDeleteItem(item);
+                      toast.error(`✅ ${item[0].name} removed`, {
+                        position: 'bottom-center',
+                        autoClose: 2500,
+                        hideProgressBar: true,
+                        closeOnClick: false,
+                        pauseOnHover: false,
+                        draggable: false,
+                        progress: undefined,
+                      });
+                    }}
+                  >
+                    Remove
+                  </button>
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
+      <ToastContainer />
     </div>
   );
 }

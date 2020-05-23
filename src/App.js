@@ -29,6 +29,13 @@ function App() {
     setNumItems(numItems + 1);
   };
 
+  const handleRemoveItem = (item) => {
+    const items = [...cartItems].filter((i) => i.id !== item[0].id);
+    const numItems = items.length;
+    setCartItems(items);
+    setNumItems(numItems);
+  };
+
   const handleShowCart = () => {
     console.log(cartItems);
   };
@@ -45,6 +52,7 @@ function App() {
           cartItems: cartItems,
           onAddItem: handleAddItem,
           onShowCart: handleShowCart,
+          onDeleteItem: handleRemoveItem,
         }}
       >
         <Menu />
