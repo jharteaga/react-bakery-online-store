@@ -18,7 +18,7 @@ function Menu(props) {
 
   return (
     <React.Fragment>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-light bg-dark mb-5">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-light bg-dark mb-4">
         <Link className="navbar-brand" to="/">
           Bakery Online Store
         </Link>
