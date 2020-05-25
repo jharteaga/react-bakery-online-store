@@ -103,8 +103,21 @@ h1 {
 .shopping-container {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: flex-start;
+  margin: 0;
+  padding: 0;
+
+  & .shopping-table {
+    width: 800px;
+    max-width: 100%;
+    margin-right: 2em;
+  }
+}
+
+.cart,
+.cart:focus {
+  outline: none;
 }
 
 //********************************************
@@ -195,12 +208,52 @@ h1 {
   .drinks {
     grid-template-columns: repeat(3, auto);
   }
+
+  .shopping-container {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+
+    & .preview-checkout {
+      display: flex;
+      width: 95%;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2em;
+
+      & h1 {
+        margin-right: 2em;
+        font-size: 1.5rem;
+      }
+
+      & button {
+        font-size: 1rem;
+      }
+    }
+
+    & .shopping-table {
+      font-size: 0.9rem;
+      margin: 0 auto;
+
+      & h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .image-col {
+    display: none;
+  }
 }
 
 @include mediaMd {
   .bakery,
   .drinks {
     grid-template-columns: repeat(2, auto);
+  }
+
+  .btn-contact-send {
+    width: 20%;
   }
 }
 
@@ -212,6 +265,10 @@ h1 {
   .bakery,
   .drinks {
     grid-template-columns: repeat(1, auto);
+  }
+
+  .btn-contact-send {
+    width: 100%;
   }
 }
 

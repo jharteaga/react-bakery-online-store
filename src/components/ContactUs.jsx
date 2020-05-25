@@ -76,7 +76,7 @@ function ContactUs(props) {
             <div className="alert alert-danger">This field is required</div>
           )}
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-primary btn-contact-send">
           Send
         </button>
       </form>

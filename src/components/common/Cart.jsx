@@ -22,6 +22,7 @@ export default function Cart() {
       aria-label="cart"
       id="cart-icon"
       onClick={cartContext.onShowCart}
+      className="cart"
     >
       <StyledBadge badgeContent={cartContext.numItems} color="primary">
         <ShoppingCartIcon

@@ -96,7 +96,7 @@ function Menu(props) {
             </React.Fragment>
           )}
           {currentUser && (
-            <div>
+            <div data-toggle="collapse" data-target=".navbar-collapse.show">
               <span className="user-info">
                 Welcome, {currentUser.firstName}!
               </span>

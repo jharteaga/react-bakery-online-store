@@ -58,7 +58,7 @@ function App() {
   };
 
   const handleShowCart = () => {
-    console.log(cartItems);
+    //console.log(cartItems);
   };
 
   useEffect(() => {

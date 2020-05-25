@@ -14,25 +14,31 @@ function ShoppingCart(props) {
 
   return (
     <div className="shopping-container">
-      <div className="preview-checkout mt-2">
-        <h1>
-          <p>Your total is: </p> US$
-          {listItems
-            .reduce((accum, currentVal) => {
-              return accum + currentVal[0].price * currentVal.length;
-            }, 0)
-            .toFixed(2)}
-        </h1>
-        <button className="btn btn-success btn-lg mt-2">
-          Proceed to Checkout
-        </button>
-      </div>
-      <div className="table-responsive-sm mb-5">
+      {listItems
+        .reduce((accum, currentVal) => {
+          return accum + currentVal[0].price * currentVal.length;
+        }, 0)
+        .toFixed(2) !== '0.00' && (
+        <div className="preview-checkout mt-2">
+          <h1>
+            <p>Total: </p> US$
+            {listItems
+              .reduce((accum, currentVal) => {
+                return accum + currentVal[0].price * currentVal.length;
+              }, 0)
+              .toFixed(2)}
+          </h1>
+          <button className="btn btn-success btn-lg mt-2">
+            Proceed to Checkout
+          </button>
+        </div>
+      )}
+      <div className="table-responsive-sm mb-5 shopping-table">
         <h1 className="mb-4">Shopping Cart</h1>
         <table className="table">
           <thead className="thead-dark">
             <tr>
-              <th></th>
+              <th className="image-col"></th>
               <th>Product Name</th>
               <th>Price</th>
               <th>Quantity</th>
@@ -42,7 +48,7 @@ function ShoppingCart(props) {
           <tbody>
             {listItems.map((item) => (
               <tr key={item[0].id} className="">
-                <td>
+                <td className="image-col">
                   <img src={item[0].image} alt="product" className="img-cart" />
                 </td>
                 <td>{item[0].name}</td>
