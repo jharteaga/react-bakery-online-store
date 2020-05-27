@@ -120,6 +120,22 @@ h1 {
   outline: none;
 }
 
+.fa-check-circle {
+  font-size: 3rem;
+  color: green;
+  margin-right: 0.3em;
+}
+
+.modal-body {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.modal-title {
+  font-weight: 700;
+}
+
 //********************************************
 
 .bakery,

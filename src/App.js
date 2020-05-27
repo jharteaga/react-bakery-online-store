@@ -57,8 +57,10 @@ function App() {
     return array;
   };
 
-  const handleShowCart = () => {
-    //console.log(cartItems);
+  const handlePurchase = () => {
+    localStorage.removeItem('userCartItems');
+    setCartItems([]);
+    setNumItems(0);
   };
 
   useEffect(() => {
@@ -72,7 +74,7 @@ function App() {
           numItems: numItems,
           cartItems: cartItems,
           onAddItem: handleAddItem,
-          onShowCart: handleShowCart,
+          onPurchase: handlePurchase,
           onDeleteItem: handleRemoveItem,
           onQuantityChange: handleQuantityChange,
         }}

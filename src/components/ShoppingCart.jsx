@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import CartContext from './context/cartContext';
 import _ from 'lodash';
+import Modal from './common/Modal';
 
 function ShoppingCart(props) {
   const cartContext = useContext(CartContext);
@@ -28,7 +29,12 @@ function ShoppingCart(props) {
               }, 0)
               .toFixed(2)}
           </h1>
-          <button className="btn btn-success btn-lg mt-2">
+          <button
+            className="btn btn-success btn-lg mt-2"
+            data-toggle="modal"
+            data-target="#purchaseModal"
+            onClick={() => cartContext.onPurchase()}
+          >
             Proceed to Checkout
           </button>
         </div>
@@ -98,6 +104,7 @@ function ShoppingCart(props) {
           </tbody>
         </table>
       </div>
+      <Modal />
       <ToastContainer />
     </div>
   );
